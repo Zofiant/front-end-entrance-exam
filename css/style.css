@@ -252,7 +252,7 @@ input {
 /* это контейнер мост ресенти */
 .tag {
   visibility: hidden;
-  background-color: #7e7332ff;
+  background-color: rgba(126, 115, 18, 0.4);
   position: relative;
 }
 
