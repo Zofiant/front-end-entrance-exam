@@ -1,13 +1,343 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>frontend_exam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="app"></div>
+    <button id="toDowloandPdf">СКАЧАТЬ PDF</button>
+    <div class="resume" id="resumeToDown">
+      <div class="box photo">
+        <img
+          class="resumePhoto"
+          src="/img/profileImg (1).png"
+          alt="Resume_photo"
+        />
+      </div>
+      <div class="box name">
+        <!-- Лол не знал, что можно вставить эмодзи напрямую -->
+        <textarea rows="1" class="input hello">Hello 👋🏻 i'm</textarea>
+        <div class="yourInfo">
+          <textarea class="input nickname">Karthik SR</textarea
+          ><textarea class="input role">UX/UI Designer</textarea>
+        </div>
+      </div>
+      <div class="box languages">
+        <h1 class="nameTitle lang">Languages</h1>
+        <div class="languagesWrapper">
+          <div class="nameLanguages">
+            <input type="text" class="language" value="English" />
+            <input type="text" class="language" value="Malayalam" />
+            <input type="text" class="language" value="Hindi" />
+          </div>
+          <div class="levelLanguages">
+            <input
+              type="range"
+              min="1"
+              max="5"
+              value="5"
+              class="slider"
+              id="myRange"
+            />
+            <input
+              type="range"
+              min="1"
+              max="5"
+              value="5"
+              class="slider"
+              id="myRange"
+            />
+            <input
+              type="range"
+              min="1"
+              max="5"
+              value="4"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="box experience">
+        <h1 class="nameTitle">Experience</h1>
+        <div class="container">
+          <div class="draggable" draggable="true">
+            <div class="topBar">
+              <textarea rows="1" class="input date" maxlength="26">
+Jun. 2023 - Present</textarea
+              >
+              <div class="tag"><p class="mostRecent">most recent</p></div>
+            </div>
+            <div class="wrapperContent">
+              <div class="wrapperinputs">
+                <textarea rows="1" maxlength="25" class="textview jobInfo1">
+Marketing Manager</textarea
+                >
+                <textarea rows="1" maxlength="25" class="input jobInfo2">
+Pankayam | Full-time</textarea
+                >
+              </div>
+              <ul class="featuredPoints">
+                <li>
+                  <textarea class="textview point" maxlength="104" rows="1">
+Strategy development and planning of campaigns that promote the business and generate genuine traffic</textarea
+                  >
+                </li>
+                <li>
+                  <textarea class="textview point" maxlength="90" rows="1">
+SEO Content Creation for Blogs, Website, Social media</textarea
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="draggable" draggable="true">
+            <div class="topBar">
+              <textarea class="input date" maxlength="26">
+2017 - Present</textarea
+              >
+              <span class="tag"><p class="mostRecent">most recent</p></span>
+            </div>
+            <div class="wrapperContent">
+              <div class="wrapperinputs">
+                <textarea rows="1" maxlength="25" class="input jobInfo1">
+Graphic / Web designer</textarea
+                >
+                <textarea rows="1" maxlength="25" class="input jobInfo2">
+Freelance</textarea
+                >
+              </div>
+              <ul class="featuredPoints">
+                <li>
+                  <textarea class="textview point" maxlength="90" rows="1">
+Development of internal projects from scratch, product design of brands </textarea
+                  >
+                </li>
+                <li>
+                  <textarea class="textview point" maxlength="90" rows="1">
+Landing page, webapps and hybrid apps</textarea
+                  >
+                </li>
+                <li>
+                  <textarea class="textview point" maxlength="109" rows="1">
+coordinating with outside agencies,art services,web designer,marketing,printers,and colleagues as necessary.</textarea
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="draggable" draggable="true">
+            <div class="topBar">
+              <textarea class="input date" maxlength="26">
+Sep. 2021 - Jun.2023</textarea
+              >
+              <span class="tag"><p class="mostRecent">most recent</p></span>
+            </div>
+            <div class="wrapperContent">
+              <div class="wrapperinputs">
+                <textarea rows="1" maxlength="25" class="input jobInfo1">
+Legal Assistant</textarea
+                >
+                <textarea rows="1" maxlength="25" class="input jobInfo2">
+Law Firm | Intern</textarea
+                >
+              </div>
+              <ul class="featuredPoints">
+                <li>
+                  <textarea class="textview point" maxlength="90" rows="1">
+Provide administrative support to lawyer and enhance office effectiveness</textarea
+                  >
+                </li>
+                <li>
+                  <textarea class="textview point" maxlength="90" rows="1">
+Handle communication with clients, witnesses etc.</textarea
+                  >
+                </li>
+                <li>
+                  <textarea class="textview point" maxlength="90" rows="1">
+repare case briefs and summarize depositions, interrogatories and testimony</textarea
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box skills">
+        <input type="text" class="input nameTitle" value="Tools" />
+        <div class="containerOfBoxesOfSkills">
+          <div class="boxOfSkills">
+            <input type="text" class="skillTag" value="design" maxlength="10" />
+            <div class="skill">
+              <img class="logo" src="img/logoFigma.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/🦆 icon _adobe illustrator_.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/🦆 icon _adobe photoshop_.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/🦆 icon _adobe premiere_.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/logoNotion.svg" />
+            </div>
+            <div class="skill"><img class="logo" src="img/logoMeet.svg" /></div>
+          </div>
+          <div class="boxOfSkills">
+            <input
+              type="text"
+              class="skillTag"
+              value="no-code"
+              maxlength="10"
+            />
+            <div class="skill">
+              <img class="logo" src="img/logoFramer.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/logoWebflow.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/logoZapìer 1.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/logoWordpress.svg" />
+            </div>
+          </div>
+          <div class="boxOfSkills">
+            <input
+              type="text"
+              class="skillTag intelekt"
+              value="artificial intelligence"
+              maxlength="22"
+            />
+            <div class="skill">
+              <img class="logo" src="img/logoChatGPT 1.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/logoCopilot 1.svg" />
+            </div>
+            <div class="skill">
+              <img class="logo" src="img/logoMidjourney 1.svg" />
+            </div>
+            <div class="skill"></div>
+          </div>
+        </div>
+      </div>
+      <div class="box education">
+        <div class="containerEdu">
+          <div class="dateEdu">
+            <input
+              class="input yearEdu"
+              maxlength="9"
+              value="2023"
+            /><span></span>
+          </div>
+          <div class="descriptionEdu">
+            <input
+              class="input fieldStudy"
+              maxlength="17"
+              value="UI/UX"
+            /><textarea maxlength="95" class="textview hashtags">
+#UX#UI#research#DesignSystem#Ui#wireframing#figma#Ux</textarea
+            >
+          </div>
+          <input class="input schoolEdu" maxlength="24" value="Coursrea" />
+        </div>
+        <div class="containerEdu">
+          <div class="dateEdu">
+            <input
+              class="input yearEdu"
+              maxlength="9"
+              value="2017-2022"
+            /><span></span>
+          </div>
+          <div class="descriptionEdu">
+            <input
+              class="input fieldStudy"
+              maxlength="17"
+              value="Law"
+            /><textarea maxlength="95" class="textview hashtags">
+#law#legalStudies#contracts#internationalLaws</textarea
+            >
+          </div>
+          <input
+            class="input schoolEdu"
+            maxlength="24"
+            value="University of Kerala"
+          />
+        </div>
+        <div class="containerEdu">
+          <div class="dateEdu">
+            <input
+              class="input yearEdu"
+              maxlength="9"
+              value="2017"
+            /><span></span>
+          </div>
+          <div class="descriptionEdu">
+            <input
+              class="input fieldStudy"
+              maxlength="17"
+              value="Graphic design"
+            /><textarea maxlength="95" class="textview hashtags">
+#branding#web#illustration#adobe</textarea
+            >
+          </div>
+          <input class="input schoolEdu" maxlength="24" value="Coursrea" />
+        </div>
+      </div>
+      <div class="box interests">
+        <div class="box containerTags">
+          <input class="input nameTitle" value="Interests" />
+          <div class="tags">
+            <a class="tag-link" contenteditable="true">branding</a>
+            <a class="tag-link" contenteditable="true">design</a>
+            <a class="tag-link" contenteditable="true">photography</a>
+            <a class="tag-link" contenteditable="true"
+              >artificial intelligence</a
+            >
+            <a class="tag-link" contenteditable="true">illustration</a>
+            <a class="tag-link" contenteditable="true">typography</a>
+            <a class="tag-link" contenteditable="true">social networks</a>
+            <a class="tag-link" contenteditable="true">research</a>
+            <a class="tag-link" contenteditable="true">drone pilot</a>
+            <a class="tag-link" contenteditable="true">games</a>
+          </div>
+        </div>
+        <div class="box containerChat">
+          <textarea class="textview letsChat" maxlength="63">
+Let´s chat! I´m ready to work on excinting projects</textarea>
+          <input
+            class="input email"
+            maxlength="42"
+            value="srkarthik.designscape@gmail.com"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="editor"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+      integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="./js/main.js"></script>
+    <script src="/js/rowAdapter.js"></script>
+
+    <script src="/js/pdfFile.js"></script>
   </body>
 </html>

@@ -1,96 +1,509 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #000000;
+  background-color: #2b2b2b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+}
+textarea {
+  padding: 0;
+  resize: none;
+  overflow-y: hidden;
+}
+input {
+  padding: 0;
+}
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #2b2b2b;
+}
+
+.nameTitle {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.resume {
+  margin: 100px auto;
+  background-color: #ffffff;
+  width: 595px;
+  height: 842px;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 124px);
+  gap: 20px;
+  grid-template-rows: 124px 359px 289px;
+}
+#toDowloandPdf {
+  position: absolute;
+  width: 10em;
+  height: 2.5em;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  background-color: #149063;
+}
+
+.box {
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 12px;
+}
+.placeholderphoto {
+  box-sizing: border-box;
+}
+.resumePhoto {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.container {
+  background-color: #ffeded;
+
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+
+  gap: 8px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.draggable {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  row-gap: 8px;
+
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 10px;
+  cursor: move;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.draggable:first-child {
+  background-color: #28d979;
+  color: #f0f0f0;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+}
+
+.draggable:first-child textarea {
+  color: #f0f0f0;
+}
+.draggable:first-child ul li:before {
+  background-color: #ffffff;
+}
+
+.topBar {
+  height: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.photo {
+  padding: 0;
+  width: 124px;
+  height: 124px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.name {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  padding: 12px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hello {
+  font-size: 10px;
+  font-weight: 500;
+  width: 100px;
+  height: 15px;
+}
+.yourInfo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 39px;
+}
+.nickname {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100px;
+}
+.role {
+  font-size: 12px;
+  width: 100px;
+}
+.languages {
+  grid-row: 1/2;
+  grid-column: 3/5;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.lang {
+  margin-bottom: 0px;
+}
+.languagesWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 17px;
+  height: 53px;
+}
+
+.nameLanguages {
+  width: 58px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.language {
+  font-size: 10px;
+  font-weight: 500;
+  margin: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #2b2b2b;
+  padding: 0;
+}
+.levelLanguages {
+  width: 168px;
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slider {
+  margin: 0;
+  -webkit-appearance: none;
+
+  overflow: hidden;
+  height: 11px;
+  width: 100%;
+  background: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+::-webkit-slider-runnable-track {
+  background: none;
+}
+
+::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 40px;
+  background: #fff;
+  box-shadow: -200px 0 0 200px #28d979;
+  border: none;
+}
+
+.experience {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 12px 12px;
+}
+
+.date {
+  font-size: 8px;
+  width: 124px;
+}
+
+.wrapperContent {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+.wrapperinputs {
+  display: flex;
+  flex-direction: column;
+  width: 124px;
+}
+
+/* это контейнер мост ресенти */
+.tag {
+  visibility: hidden;
+  background-color: #7e7332ff;
+  position: relative;
+}
+
+.draggable:first-child .tag {
+  visibility: visible;
+  width: 61px;
+  height: 16px;
+  border-radius: 59px;
+}
+/* это текст */
+.mostRecent {
+  position: absolute;
+  visibility: hidden;
+  margin: 0;
+  top: 10%;
+  left: 0;
+  right: 0;
   text-align: center;
+}
+.draggable:first-child p {
+  visibility: visible;
+  font-size: 8px;
+}
+
+.featuredPoints {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 0;
+  width: 239px;
+}
+.featuredPoints li {
+  position: relative;
+  padding-left: 10px;
+  width: 100%;
+
+  display: flex;
+}
+
+.featuredPoints li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: black;
+}
+/* Название класса обусловленно, чтобы его ловила js, а также семестром мучительной разработки на андройд */
+.textview {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 8px;
+  color: #2b2b2b;
+  width: 100%;
+}
+.point {
+  font-size: 8px;
+}
+
+.jobInfo1 {
+  width: 124px;
+  font-size: 10px;
+  padding: 0;
+  font-weight: 500;
+}
+.jobInfo2 {
+  width: 100%;
+  font-size: 8px;
+  font-weight: 400;
+}
+
+.skills {
+  grid-row: 2/3;
+  grid-column: 4/5;
+  box-sizing: border-box;
+}
+.containerOfBoxesOfSkills {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 auto;
+  width: 76px;
+}
+.boxOfSkills {
+  position: relative;
+  justify-content: center;
+  box-sizing: border-box;
+  display: grid;
+  padding: 15px 4px;
+  width: 76px;
+  grid-template-columns: repeat(2, 18px);
+  grid-auto-rows: 18px;
+  gap: 16px;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+.skill {
+  box-sizing: border-box;
+  width: 18px; /* Ширина родительского элемента */
+  position: relative; /* Сделаем .skill позиционированным контекстом для .logo */
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Смещаем .logo на половину его собственной ширины и высоты */
 }
 
-.card {
-  padding: 2em;
+.skillTag {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 59px;
+  padding: 0px 3px;
+  position: absolute;
+  outline: none;
+  height: 11px;
+  width: 30px;
+  text-align: center;
+  border: none;
+  font-size: 5px;
 }
 
-.read-the-docs {
-  color: #888;
+/* neutonOverIntelekt */
+.no-code {
+  width: 35px;
+}
+.intelekt {
+  width: 53px;
+}
+.education {
+  grid-row: 3/4;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(2, 116px);
+  gap: 16px;
+  grid-auto-rows: 120px;
+  border-radius: 12px;
+}
+.containerEdu {
+  box-sizing: border-box;
+  display: flex;
+  width: 116px;
+  max-height: fit-content;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.containerEdu:first-child {
+  background-color: #28d979;
+  color: #ffffff;
+}
+.containerEdu:first-child textarea,
+.containerEdu:first-child input {
+  color: #ffffff;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+.dateEdu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.yearEdu {
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  width: 57px;
+  height: 15px;
+  font-size: 10px;
 }
-button:hover {
-  border-color: #646cff;
+.descriptionEdu {
+  display: flex;
+  flex-direction: column;
+  gap: -2px;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.fieldStudy {
+  width: 100%;
+  font-weight: 500;
+  font-size: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.schoolEdu {
+  font-size: 8px;
+}
+
+.hashtags {
+  font-size: 8px;
+  color: #149063;
+}
+
+.interests {
+  grid-row: 3/4;
+  grid-column: 3/5;
+  background-color: transparent;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.containerTags {
+  width: 100%;
+  height: 177px;
+}
+.tags {
+  padding: 0;
+  width: 243px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.tags a {
+  white-space: nowrap;
+  /* Style for "Rounded Re" */
+  width: auto;
+  border-radius: 40px;
+  background-color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.tags a:hover {
+  background: #28d979;
+}
+
+.containerChat {
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.letsChat {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.email {
+  font-size: 10px;
+  color: #dddddd;
 }
