@@ -21,12 +21,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .querySelector("#toDowloandPdf")
     .addEventListener("click", function () {
-      html2canvas(document.querySelector("#resumeToDown")).then((canvas) => {
-        let base64image = canvas.toDataURL("image/png");
-        // console.log(base64image);
-        let pdf = new jsPDF("p", "px", [595, 842]);
-        pdf.addImage(base64image, "PNG", 0, 0, 595, 842);
-        pdf.save("webtylepress-two.pdf");
-      });
+      const element = document.querySelector(".resume");
+      const opt = {
+        margin: 0,
+        filename: "CV.pdf",
+        image: { type: "jpeg", quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
+      };
+
+      html2pdf().set(opt).from(element).save();
     });
 });
