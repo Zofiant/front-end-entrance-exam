@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const element = document.querySelector(".resume");
       const opt = {
         margin: 0,
-        filename: "CV.pdf",
+        filename: "Resume.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2 },
         jsPDF: { unit: "in", format: "letter", orientation: "portrait" },
