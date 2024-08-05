@@ -1,5 +1,3 @@
-import "../css/style.css";
-
 const draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
 
